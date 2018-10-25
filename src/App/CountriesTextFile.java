@@ -16,35 +16,6 @@ import java.util.Scanner;
 
 public class CountriesTextFile {
 
-	public static void removeFromFile(String directoryFolder, String fileName, String input) {
-		Path filePath = Paths.get(directoryFolder, fileName);
-		File file = filePath.toFile();
-		try {
-		FileReader fr = new FileReader(file);
-		BufferedReader reader = new BufferedReader(fr);  
-		
-		String line = reader.readLine();
-		
-			while (line != null) {
-				System.out.println(line);
-				line = reader.readLine();	
-			}
-			reader.close();
-			
-		} catch (FileNotFoundException e) {
-			System.out.println("File not found!");
-		
-		} catch (IOException e) {
-			System.out.println("Contact customer service.");
-		
-		}
-	}
-		
-	
-	
-	
-	
-	
 
 	public static void readFromFile(String directoryFolder, String fileName) {
 		Path filePath = Paths.get(directoryFolder, fileName);
